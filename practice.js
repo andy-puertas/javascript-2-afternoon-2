@@ -17,8 +17,10 @@ var arr = [10,20,30];
   Return the first item in the given array.
 */
 
-//Code Here
-
+function first(arr) {
+  var firstItem = arr[0];
+  return firstItem;
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -32,7 +34,10 @@ var arr = [40,50,60];
   Return the last item in the given array.
 */
 
-//Code Here
+function last(arr){
+  var lastItem = arr[arr.length - 1];
+  return lastItem;
+}
 
 
 
@@ -47,7 +52,12 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Loop through the given array and alert every item in the array.
 */
 
-//Code Here
+function looper(family) {
+  for(i = 0; i < family.length; i++ ){
+    alert(family[i])
+  } 
+  return family;
+}
 
 
 
@@ -62,8 +72,13 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Loop through the given array backwards alerting every item in the array starting at the end.\
 */
 
-//Code Here
+function reversedLooper(letters) {
 
+  for(i = letters.length - 1; i >= 0; i-- ) {
+    alert(letters[i])
+  }
+  return letters;
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -77,8 +92,16 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
   Return only the even numbers from the array.
 */
 
-//Code Here
+function evenFinder(nums) {
+  var newArray = [];
+  for(i = 0; i <nums.length; i++) {
+    if(nums[i] %2 === 0){
+      newArray.push(nums[i])
+    }
 
+  }
+  return newArray
+}
 
 
 ////////// EXTRA PRACTICE PROBLEMS BELOW //////////
@@ -94,8 +117,21 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider(numbersArray) {
+  var evenArray = [];
+  var oddArray = [];
+  for(i=0; i<numbersArray.length; i++) {
+    if(numbersArray[i] %2 === 0){
+      evenArray.push(numbersArray[i]);
+    }
+    if(numbersArray[i] %2 === 1) {
+      oddArray.push(numbersArray[i]);
+    }
+  }
+    var finalArray = [evenArray,oddArray];
+    return finalArray;
 
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -115,7 +151,15 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
+function finder(array) {
+  let random = getRandomArbitrary();
+  for(i=0; i<array.length; i++){
+    if(array[i]===random){
+      return true;
+    }
+  }
+  return false;
+}
 
 
 
@@ -142,7 +186,6 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 */
 
-//Code Here
 
 
 
