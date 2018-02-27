@@ -186,8 +186,24 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 */
 
+function removeItem(myGroceryList, item) {
+  for(let i =0; i<myGroceryList.length; i++) {
+    if(myGroceryList[i]===item) {
+      myGroceryList.splice(i,1)
+    }
+  }
+  return myGroceryList;
+}
 
-
+function addItem(myGroceryList, item) {
+  for(let i=0; i<myGroceryList; i++) {
+    if(myGroceryList[i]===item){
+      return myGroceryList;
+    }
+  }
+  myGroceryList.push(item);
+  return myGroceryList;
+}
 
 ////////// PROBLEM 9 //////////
 
@@ -195,8 +211,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
-
+function maker(){
+  var numba = [];
+  for(i=1; i<= 215; i++) {
+    numba.push(i);
+  }
+  return numba;
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -211,8 +232,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
-
+function addTen(numbers) {
+ let addTenArray = [];
+  for(let i=0; i < numbers.length; i++) {
+    addTenArray.push(Number(numbers[i])+10);
+  }
+  return addTenArray;
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -288,17 +314,27 @@ var colt = {
   After that console.log the length of the Array and make sure that it's equal to 4. 
 */
 
-//Code Here
+
+devMountainEmployees.push(tyler);
+devMountainEmployees.push(ryan);
+devMountainEmployees.push(colt);
+devMountainEmployees.push(cahlan);
 
 
-
-/*
-  Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
+ /* Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
-//Code Here
+function deleteEmployee(devMountainEmployees) {
+  for(let i = 0;i < devMountainEmployees.length; i++ ){
+    if(devMountainEmployees[i]===cahlan){
+      devMountainEmployees.splice(i,3)
+    }
+  }
+  return devMountainEmployees
+}
 
+deleteEmployee(devMountainEmployees)
 
 
 ////////// PROBLEM 13 //////////
